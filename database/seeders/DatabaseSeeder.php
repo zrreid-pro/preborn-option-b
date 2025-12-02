@@ -7,6 +7,7 @@ use App\Models\Campaign;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -24,6 +25,10 @@ class DatabaseSeeder extends Seeder
                 'password' => 'password',
                 'account_type' => 'manager',
                 'email_verified_at' => now(),
+                'remember_token' => Str::random(10),
+                'two_factor_secret' => Str::random(10),
+                'two_factor_recovery_codes' => Str::random(10),
+                'two_factor_confirmed_at' => now(),
             ]
         );
 
@@ -34,6 +39,10 @@ class DatabaseSeeder extends Seeder
                 'password' => 'password',
                 'account_type' => 'viewer',
                 'email_verified_at' => now(),
+                'remember_token' => Str::random(10),
+                'two_factor_secret' => Str::random(10),
+                'two_factor_recovery_codes' => Str::random(10),
+                'two_factor_confirmed_at' => now(),
             ]
         );
 
