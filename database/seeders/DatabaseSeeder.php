@@ -44,10 +44,6 @@ class DatabaseSeeder extends Seeder
             DonationSeeder::class
         ]);
 
-        // $totalRevenue = DB::table('donations')->sum('donation_amount');
-
-        // dump($totalRevenue);
-
         for ($i = 1; $i <= 5; $i++) {
             $totalRevenue = DB::table('donations')->where('campaign_id', $i)->sum('donation_amount');
 
