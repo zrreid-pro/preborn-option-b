@@ -24,11 +24,11 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Test Manager',
                 'password' => 'password',
                 'account_type' => 'manager',
-                'email_verified_at' => now(),
+                // 'email_verified_at' => now(),
                 'remember_token' => Str::random(10),
-                'two_factor_secret' => Str::random(10),
-                'two_factor_recovery_codes' => Str::random(10),
-                'two_factor_confirmed_at' => now(),
+                // 'two_factor_secret' => Str::random(10),
+                // 'two_factor_recovery_codes' => Str::random(10),
+                // 'two_factor_confirmed_at' => now(),
             ]
         );
 
@@ -38,11 +38,11 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Test Viewer',
                 'password' => 'password',
                 'account_type' => 'viewer',
-                'email_verified_at' => now(),
+                // 'email_verified_at' => now(),
                 'remember_token' => Str::random(10),
-                'two_factor_secret' => Str::random(10),
-                'two_factor_recovery_codes' => Str::random(10),
-                'two_factor_confirmed_at' => now(),
+                // 'two_factor_secret' => Str::random(10),
+                // 'two_factor_recovery_codes' => Str::random(10),
+                // 'two_factor_confirmed_at' => now(),
             ]
         );
 
