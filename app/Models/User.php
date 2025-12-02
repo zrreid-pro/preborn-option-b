@@ -22,6 +22,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'account_type'
     ];
 
     /**
@@ -48,5 +49,9 @@ class User extends Authenticatable
             'password' => 'hashed',
             'two_factor_confirmed_at' => 'datetime',
         ];
+    }
+
+    public function donations() {
+        return $this->hasMany(Donation::class);
     }
 }
