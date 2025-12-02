@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Campaign;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -44,5 +45,17 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // $totalRevenue = DB::table('donations')->sum('donation_amount');
+
+        // dump($totalRevenue);
+
+        for ($i = 1; $i <= 5; $i++) {
+            $totalRevenue = DB::table('donations')->where('campaign_id', $i)->sum('donation_amount');
+
+            $campaign = Campaign::find($i);
+
+            $campaign->total_donations = $totalRevenue;
+
+            $campaign->save();
+        }
     }
 }
